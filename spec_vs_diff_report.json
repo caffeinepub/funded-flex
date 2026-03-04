@@ -1,0 +1,87 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-27T10:33:26.796Z",
+  "summary": "The diff implements most of the Samay Pizza website requirements including 3 pages (Home, Menu, Order), deep red/white theme, cart context, backend order storage, WhatsApp integration, and footer with correct contact details. However, a few specific requirements have gaps: the UPI QR code image and Pay Now button on the Order page are not clearly evidenced in the truncated diff, the backend placeOrder method does not return a success/failure result, and orders/state variables lack stable declarations for upgrade persistence.",
+  "missing_requirements": [
+    {
+      "id": "REQ-4",
+      "requirement": "UPI QR code image rendered on the page and a 'Pay Now' button on the Order/Checkout page",
+      "reason": "The OrderPage.tsx diff is truncated and does not show the UPI payment section with the QR code image or a Pay Now button. The file summary also does not explicitly mention these elements.",
+      "evidence": [
+        "frontend/src/pages/OrderPage.tsx"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "requirement": "Order submission returns a success/failure result",
+      "reason": "The backend placeOrder method in main.mo returns async () (unit), not a Result or variant indicating success or failure as required by the AC.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "requirement": "Orders are persisted in stable storage",
+      "reason": "The orders Map and nextOrderId variable in main.mo are declared without the 'stable' keyword. Without stable declarations data will be lost on canister upgrades.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Old Funded Flex component files and pages are still present as modified files rather than being removed",
+      "reason": "The build request explicitly requires removing all Funded Flex branding and content but files like DataGlobe.tsx, Hero.tsx, CoreServices.tsx, TeamSection.tsx, ContactForm.tsx, Home.tsx, AboutUs.tsx, ContactUs.tsx, Solutions.tsx, and InstitutionalFunding.tsx remain as modified files in the diff.",
+      "evidence": [
+        "frontend/src/components/DataGlobe.tsx",
+        "frontend/src/components/Hero.tsx",
+        "frontend/src/components/CoreServices.tsx",
+        "frontend/src/components/TeamSection.tsx",
+        "frontend/src/components/ContactForm.tsx",
+        "frontend/src/pages/Home.tsx",
+        "frontend/src/pages/AboutUs.tsx",
+        "frontend/src/pages/ContactUs.tsx",
+        "frontend/src/pages/Solutions.tsx",
+        "frontend/src/pages/InstitutionalFunding.tsx"
+      ]
+    },
+    {
+      "description": "submitContactForm method and contactSubmissions storage added to backend",
+      "reason": "REQ-5 only requests order persistence for the new Samay Pizza site. The contact form submission backend endpoint appears carried over from the old Funded Flex codebase and was not requested in the new build.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.72,
+  "changed_files": [
+    "backend/main.mo",
+    "backend/migration.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/ContactForm.tsx",
+    "frontend/src/components/CoreServices.tsx",
+    "frontend/src/components/DataGlobe.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Hero.tsx",
+    "frontend/src/components/Navbar.tsx",
+    "frontend/src/components/TeamSection.tsx",
+    "frontend/src/context/CartContext.tsx",
+    "frontend/src/hooks/useCart.ts",
+    "frontend/src/hooks/usePlaceOrder.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/pages/AboutUs.tsx",
+    "frontend/src/pages/ContactUs.tsx",
+    "frontend/src/pages/Home.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/InstitutionalFunding.tsx",
+    "frontend/src/pages/MenuPage.tsx",
+    "frontend/src/pages/OrderPage.tsx",
+    "frontend/src/pages/Solutions.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

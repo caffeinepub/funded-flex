@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "3-page professional food delivery website for 'Samay Pizza' with Deep Red and White theme. Restaurant located at Sonauli Road Pipiganj, Gorakhpur (U.P). Website: samaypizza.com. Features: Home page with hero section, Menu page with categorized items and pricing, Order/Checkout page with WhatsApp integration and UPI payment.",
+  "architectural_notes": [
+    "Tech stack: React/Next.js with Tailwind CSS, mobile-first design",
+    "WhatsApp integration: +918957401994 for order notifications",
+    "Email for orders: monikakgupta2507@gmail.com",
+    "UPI payment: monikabhojwal2507@okhdfcbank with QR code display",
+    "Brand: Deep Red and White color theme"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Deep red and white hero banner with a hot pizza illustration and warm restaurant ambiance (hero-banner.dim_1200x500.png)\n- Samay Pizza logo with a stylized pizza slice and bold red text on white background (samay-pizza-logo.dim_300x300.png)\n- UPI QR code graphic for UPI ID monikabhojwal2507@okhdfcbank in a clean white card with red border (upi-qr-code.dim_300x300.png)",
+  "existing_features": [
+    {
+      "id": "feature-rebuild-the-entire-application-as-a-3-page-food-delivery-website-for-samay-pizza-replace-all-existing-funded-flex-branding-routes-components-and-pages-with-the-new-samay-pizza-website-the-site-must-use-a-deep-red-c0392b-b71c1c-and-white-color-theme-throughout-be-fully-mobile-responsive-and-have-a-clean-restaurant-style-design",
+      "title": "Rebuild the entire application as a 3-page food delivery website for 'Samay Pizza'. Replace all existing Funded Flex branding, routes, components, and pages with the new Samay Pizza website. The site must use a Deep Red (#C0392B / #B71C1C) and White color theme throughout, be fully mobile-responsive, and have a clean restaurant-style design.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-home-page-with-1-a-large-hero-section-with-welcome-to-samay-pizza-headline-and-subtext-2-fast-delivery-feature-icons-badges-3-a-prominent-order-now-button-that-navigates-to-the-menu-page-and-4-a-footer-displaying-the-restaurant-address-sonauli-road-pipiganj-gorakhpur-u-p-contact-whatsapp-number-918957401994-email-monikakgupta2507-gmail-com-and-website-samaypizza-com",
+      "title": "Create the Home page with: (1) a large hero section with 'Welcome to Samay Pizza' headline and subtext, (2) fast delivery feature icons/badges, (3) a prominent 'Order Now' button that navigates to the Menu page, and (4) a footer displaying the restaurant address (Sonauli Road Pipiganj, Gorakhpur, U.P.), contact WhatsApp number +918957401994, email monikakgupta2507@gmail.com, and website samaypizza.com.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-menu-page-with-categorized-menu-items-and-pricing-displayed-as-cards-or-a-structured-list-categories-and-items-1-pizza-regular-medium-large-pricing-cheese-corn-90-150-250-spicy-indian-100-150-250-simply-veg-paneer-ka-maza-double-cheese-paneer-makhani-sabz-bahar-samay-pizza-special-150-180-300-tandoori-paneer-veggie-supreme-best-pataka-chatpata-paneer-2-chinese-half-full-veg-chowmein-50-100-paneer-chowmein-60-120-mix-chowmein-paneer-chilli-paneer-chilli-gravy-chilli-potato-veg-manchurian-dry-gravy-3-rice-half-full-veg-fried-rice-50-100-paneer-fried-rice-60-120-veg-biryani-70-130-4-burger-veg-burger-40-classic-burger-60-veg-cheese-burger-60-classic-cheese-burger-80-5-snacks-extras-french-fries-lava-cake-extra-cheese-toppings-each-menu-item-must-have-an-add-to-cart-button-that-adds-the-selected-size-variant-to-a-cart-state",
+      "title": "Create the Menu page with categorized menu items and pricing displayed as cards or a structured list. Categories and items: (1) Pizza (Regular/Medium/Large pricing): Cheese Corn (₹90/150/250), Spicy Indian (₹100/150/250), Simply Veg, Paneer Ka Maza, Double Cheese, Paneer Makhani, Sabz Bahar, Samay Pizza Special (₹150/180/300), Tandoori Paneer, Veggie Supreme, Best Pataka, Chatpata Paneer. (2) Chinese (Half/Full): Veg Chowmein (₹50/100), Paneer Chowmein (₹60/120), Mix Chowmein, Paneer Chilli, Paneer Chilli Gravy, Chilli Potato, Veg Manchurian Dry/Gravy. (3) Rice (Half/Full): Veg Fried Rice (₹50/100), Paneer Fried Rice (₹60/120), Veg Biryani (₹70/130). (4) Burger: Veg Burger (₹40), Classic Burger (₹60), Veg Cheese Burger (₹60), Classic Cheese Burger (₹80). (5) Snacks/Extras: French Fries, Lava Cake, Extra Cheese/Toppings. Each menu item must have an 'Add to Cart' button that adds the selected size/variant to a cart state.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-order-checkout-page-with-1-a-cart-summary-showing-all-added-items-quantities-sizes-and-total-price-2-a-customer-form-with-fields-for-name-phone-number-and-delivery-address-3-a-place-order-button-that-opens-whatsapp-wa-me-918957401994-with-a-pre-filled-message-containing-the-full-item-list-total-price-and-customer-details-4-a-upi-payment-section-displaying-upi-id-monikabhojwal2507-okhdfcbank-and-a-generated-qr-code-image-for-this-upi-id-with-a-pay-now-button",
+      "title": "Create the Order/Checkout page with: (1) a cart summary showing all added items, quantities, sizes, and total price; (2) a customer form with fields for Name, Phone Number, and Delivery Address; (3) a 'Place Order' button that opens WhatsApp (wa.me/918957401994) with a pre-filled message containing the full item list, total price, and customer details; (4) a UPI payment section displaying UPI ID 'monikabhojwal2507@okhdfcbank' and a generated QR code image for this UPI ID, with a 'Pay Now' button.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Home page with hero section 'Welcome to Samay Pizza', fast delivery icons, and Order Now button",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Menu page with categorized items: Pizza (Regular/Medium/Large), Chinese (Half/Full), Rice, Burger, Snacks with pricing",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Order/Checkout page with cart summary, customer form, WhatsApp pre-filled order message, email notification, and UPI QR code payment",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Store contact form submissions and order details in the backend canister. The backend should accept and persist: customer name, phone number, address, order items (as a text summary), and total price. Provide a query method for the admin to retrieve all orders.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Apply a visually rich Deep Red and White design theme across the entire site: deep red (#B71C1C or #C0392B) as the primary brand color for headers, buttons, and accents; white backgrounds for content areas; warm typography; food-appropriate iconography (pizza, delivery scooter, etc.); smooth hover effects on menu cards and buttons.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Samay Pizza",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

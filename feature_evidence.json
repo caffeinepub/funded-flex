@@ -1,0 +1,99 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-rebuild-the-entire-application-as-a-3-page-food-delivery-website-for-samay-pizza-replace-all-existing-funded-flex-branding-routes-components-and-pages-with-the-new-samay-pizza-website-the-site-must-use-a-deep-red-c0392b-b71c1c-and-white-color-theme-throughout-be-fully-mobile-responsive-and-have-a-clean-restaurant-style-design",
+      "featureTitle": "Rebuild the entire application as a 3-page food delivery website for 'Samay Pizza'. Replace all existing Funded Flex branding, routes, components, and pages with the new Samay Pizza website. The site must use a Deep Red (#C0392B / #B71C1C) and White color theme throughout, be fully mobile-responsive, and have a clean restaurant-style design.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/App.tsx",
+        "frontend/src/components/ContactForm.tsx",
+        "frontend/src/components/CoreServices.tsx",
+        "frontend/src/components/DataGlobe.tsx",
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/Hero.tsx",
+        "frontend/src/components/Navbar.tsx",
+        "frontend/src/components/TeamSection.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/AboutUs.tsx",
+        "frontend/src/pages/ContactUs.tsx",
+        "frontend/src/pages/Home.tsx",
+        "frontend/src/pages/InstitutionalFunding.tsx",
+        "frontend/src/pages/Solutions.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-home-page-with-1-a-large-hero-section-with-welcome-to-samay-pizza-headline-and-subtext-2-fast-delivery-feature-icons-badges-3-a-prominent-order-now-button-that-navigates-to-the-menu-page-and-4-a-footer-displaying-the-restaurant-address-sonauli-road-pipiganj-gorakhpur-u-p-contact-whatsapp-number-918957401994-email-monikakgupta2507-gmail-com-and-website-samaypizza-com",
+      "featureTitle": "Create the Home page with: (1) a large hero section with 'Welcome to Samay Pizza' headline and subtext, (2) fast delivery feature icons/badges, (3) a prominent 'Order Now' button that navigates to the Menu page, and (4) a footer displaying the restaurant address (Sonauli Road Pipiganj, Gorakhpur, U.P.), contact WhatsApp number +918957401994, email monikakgupta2507@gmail.com, and website samaypizza.com.",
+      "files": [
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-menu-page-with-categorized-menu-items-and-pricing-displayed-as-cards-or-a-structured-list-categories-and-items-1-pizza-regular-medium-large-pricing-cheese-corn-90-150-250-spicy-indian-100-150-250-simply-veg-paneer-ka-maza-double-cheese-paneer-makhani-sabz-bahar-samay-pizza-special-150-180-300-tandoori-paneer-veggie-supreme-best-pataka-chatpata-paneer-2-chinese-half-full-veg-chowmein-50-100-paneer-chowmein-60-120-mix-chowmein-paneer-chilli-paneer-chilli-gravy-chilli-potato-veg-manchurian-dry-gravy-3-rice-half-full-veg-fried-rice-50-100-paneer-fried-rice-60-120-veg-biryani-70-130-4-burger-veg-burger-40-classic-burger-60-veg-cheese-burger-60-classic-cheese-burger-80-5-snacks-extras-french-fries-lava-cake-extra-cheese-toppings-each-menu-item-must-have-an-add-to-cart-button-that-adds-the-selected-size-variant-to-a-cart-state",
+      "featureTitle": "Create the Menu page with categorized menu items and pricing displayed as cards or a structured list. Categories and items: (1) Pizza (Regular/Medium/Large pricing): Cheese Corn (₹90/150/250), Spicy Indian (₹100/150/250), Simply Veg, Paneer Ka Maza, Double Cheese, Paneer Makhani, Sabz Bahar, Samay Pizza Special (₹150/180/300), Tandoori Paneer, Veggie Supreme, Best Pataka, Chatpata Paneer. (2) Chinese (Half/Full): Veg Chowmein (₹50/100), Paneer Chowmein (₹60/120), Mix Chowmein, Paneer Chilli, Paneer Chilli Gravy, Chilli Potato, Veg Manchurian Dry/Gravy. (3) Rice (Half/Full): Veg Fried Rice (₹50/100), Paneer Fried Rice (₹60/120), Veg Biryani (₹70/130). (4) Burger: Veg Burger (₹40), Classic Burger (₹60), Veg Cheese Burger (₹60), Classic Cheese Burger (₹80). (5) Snacks/Extras: French Fries, Lava Cake, Extra Cheese/Toppings. Each menu item must have an 'Add to Cart' button that adds the selected size/variant to a cart state.",
+      "files": [
+        "frontend/src/context/CartContext.tsx",
+        "frontend/src/hooks/useCart.ts",
+        "frontend/src/pages/MenuPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-order-checkout-page-with-1-a-cart-summary-showing-all-added-items-quantities-sizes-and-total-price-2-a-customer-form-with-fields-for-name-phone-number-and-delivery-address-3-a-place-order-button-that-opens-whatsapp-wa-me-918957401994-with-a-pre-filled-message-containing-the-full-item-list-total-price-and-customer-details-4-a-upi-payment-section-displaying-upi-id-monikabhojwal2507-okhdfcbank-and-a-generated-qr-code-image-for-this-upi-id-with-a-pay-now-button",
+      "featureTitle": "Create the Order/Checkout page with: (1) a cart summary showing all added items, quantities, sizes, and total price; (2) a customer form with fields for Name, Phone Number, and Delivery Address; (3) a 'Place Order' button that opens WhatsApp (wa.me/918957401994) with a pre-filled message containing the full item list, total price, and customer details; (4) a UPI payment section displaying UPI ID 'monikabhojwal2507@okhdfcbank' and a generated QR code image for this UPI ID, with a 'Pay Now' button.",
+      "files": [
+        "frontend/src/hooks/usePlaceOrder.ts",
+        "frontend/src/pages/OrderPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

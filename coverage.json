@@ -1,0 +1,154 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-27T10:33:26.801Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 6,
+    "implemented": 4,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Rebuild the entire application as a 3-page food delivery website for 'Samay Pizza'. Replace all existing Funded Flex branding, routes, components, and pages with the new Samay Pizza website. The site must use a Deep Red (#C0392B / #B71C1C) and White color theme throughout, be fully mobile-responsive, and have a clean restaurant-style design.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/index.html",
+          "frontend/src/App.tsx",
+          "frontend/src/components/Navbar.tsx",
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/pages/Home.tsx",
+          "frontend/src/pages/AboutUs.tsx",
+          "frontend/src/pages/ContactUs.tsx",
+          "frontend/src/pages/Solutions.tsx",
+          "frontend/src/pages/InstitutionalFunding.tsx",
+          "frontend/src/components/Hero.tsx",
+          "frontend/src/components/CoreServices.tsx",
+          "frontend/src/components/TeamSection.tsx",
+          "frontend/src/components/DataGlobe.tsx",
+          "frontend/src/components/ContactForm.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/index.html",
+          "frontend/src/App.tsx",
+          "frontend/src/components/Navbar.tsx",
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/pages/Home.tsx",
+          "frontend/src/pages/AboutUs.tsx",
+          "frontend/src/pages/ContactUs.tsx",
+          "frontend/src/pages/Solutions.tsx",
+          "frontend/src/pages/InstitutionalFunding.tsx",
+          "frontend/src/components/Hero.tsx",
+          "frontend/src/components/CoreServices.tsx",
+          "frontend/src/components/TeamSection.tsx",
+          "frontend/src/components/DataGlobe.tsx",
+          "frontend/src/components/ContactForm.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Create the Home page with: (1) a large hero section with 'Welcome to Samay Pizza' headline and subtext, (2) fast delivery feature icons/badges, (3) a prominent 'Order Now' button that navigates to the Menu page, and (4) a footer displaying the restaurant address (Sonauli Road Pipiganj, Gorakhpur, U.P.), contact WhatsApp number +918957401994, email monikakgupta2507@gmail.com, and website samaypizza.com.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/HomePage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/HomePage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Create the Menu page with categorized menu items and pricing displayed as cards or a structured list. Categories and items: (1) Pizza (Regular/Medium/Large pricing): Cheese Corn (₹90/150/250), Spicy Indian (₹100/150/250), Simply Veg, Paneer Ka Maza, Double Cheese, Paneer Makhani, Sabz Bahar, Samay Pizza Special (₹150/180/300), Tandoori Paneer, Veggie Supreme, Best Pataka, Chatpata Paneer. (2) Chinese (Half/Full): Veg Chowmein (₹50/100), Paneer Chowmein (₹60/120), Mix Chowmein, Paneer Chilli, Paneer Chilli Gravy, Chilli Potato, Veg Manchurian Dry/Gravy. (3) Rice (Half/Full): Veg Fried Rice (₹50/100), Paneer Fried Rice (₹60/120), Veg Biryani (₹70/130). (4) Burger: Veg Burger (₹40), Classic Burger (₹60), Veg Cheese Burger (₹60), Classic Cheese Burger (₹80). (5) Snacks/Extras: French Fries, Lava Cake, Extra Cheese/Toppings. Each menu item must have an 'Add to Cart' button that adds the selected size/variant to a cart state.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/MenuPage.tsx",
+          "frontend/src/context/CartContext.tsx",
+          "frontend/src/hooks/useCart.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/MenuPage.tsx",
+          "frontend/src/context/CartContext.tsx",
+          "frontend/src/hooks/useCart.ts"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Create the Order/Checkout page with: (1) a cart summary showing all added items, quantities, sizes, and total price; (2) a customer form with fields for Name, Phone Number, and Delivery Address; (3) a 'Place Order' button that opens WhatsApp (wa.me/918957401994) with a pre-filled message containing the full item list, total price, and customer details; (4) a UPI payment section displaying UPI ID 'monikabhojwal2507@okhdfcbank' and a generated QR code image for this UPI ID, with a 'Pay Now' button.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/OrderPage.tsx",
+          "frontend/src/hooks/usePlaceOrder.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/OrderPage.tsx",
+          "frontend/src/hooks/usePlaceOrder.ts"
+        ]
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Store contact form submissions and order details in the backend canister. The backend should accept and persist: customer name, phone number, address, order items (as a text summary), and total price. Provide a query method for the admin to retrieve all orders.",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Apply a visually rich Deep Red and White design theme across the entire site: deep red (#B71C1C or #C0392B) as the primary brand color for headers, buttons, and accents; white backgrounds for content areas; warm typography; food-appropriate iconography (pizza, delivery scooter, etc.); smooth hover effects on menu cards and buttons.",
+        "status": "missing",
+        "plannedFiles": [
+          "frontend/src/components/ui/Button.tsx",
+          "frontend/src/components/ui/Card.tsx"
+        ],
+        "matchedFiles": []
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "backend/migration.mo",
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.html",
+    "frontend/public/assets/generated/hero-banner.dim_1200x500.png",
+    "frontend/public/assets/generated/samay-pizza-logo.dim_300x300.png",
+    "frontend/public/assets/generated/upi-qr-code.dim_300x300.png",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/ContactForm.tsx",
+    "frontend/src/components/CoreServices.tsx",
+    "frontend/src/components/DataGlobe.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Hero.tsx",
+    "frontend/src/components/Navbar.tsx",
+    "frontend/src/components/TeamSection.tsx",
+    "frontend/src/context/CartContext.tsx",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useCart.ts",
+    "frontend/src/hooks/usePlaceOrder.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/pages/AboutUs.tsx",
+    "frontend/src/pages/ContactUs.tsx",
+    "frontend/src/pages/Home.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/InstitutionalFunding.tsx",
+    "frontend/src/pages/MenuPage.tsx",
+    "frontend/src/pages/OrderPage.tsx",
+    "frontend/src/pages/Solutions.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

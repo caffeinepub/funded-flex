@@ -1,0 +1,196 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Samay Pizza Food Delivery Website - Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Rebuild entire application as a 3-page Samay Pizza website with Deep Red and White theme, removing all Funded Flex branding",
+      "acceptanceCriteria": [
+        "All Funded Flex branding and content is removed",
+        "Site has exactly 3 pages: Home, Menu, and Order/Checkout",
+        "Deep Red and White theme is applied consistently across all pages",
+        "Site is fully mobile-responsive on all screen sizes",
+        "Navigation links between Home, Menu, and Order pages work correctly"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Update page title from 'Funded Flex' to 'Samay Pizza - Best Pizza in Gorakhpur'"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Replace all five existing routes (Home, About Us, Contact Us, Solutions, Institutional Funding) with three new routes: Home (/), Menu (/menu), and Order (/order). Update RootLayout to use the new Samay Pizza Navbar and Footer components."
+        },
+        {
+          "path": "frontend/src/components/Navbar.tsx",
+          "operation": "modify",
+          "description": "Replace Funded Flex navigation with Samay Pizza branding. Update nav links to Home, Menu, and Order pages. Apply deep red (#B71C1C) background with white text. Replace 'Get Funded' CTA with restaurant phone number or logo. Ensure mobile menu works with new routes."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Replace FundedFlex footer content with Samay Pizza information: restaurant name, address (Sonauli Road Pipiganj, Gorakhpur, U.P.), WhatsApp contact (+918957401994), email (monikakgupta2507@gmail.com), and website (samaypizza.com). Apply deep red accents and white background theme."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Replace dark theme color tokens (obsidian, cobalt, silver-mist, gold) with Samay Pizza Deep Red and White theme. Set CSS custom properties: --primary to #B71C1C or #C0392B (deep red), --background to white/off-white, --foreground to dark gray for text, --accent to lighter red variant. Remove glassmorphism and dark-theme-specific styles. Add food-appropriate hover transitions and card shadows."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Update Tailwind theme to match Samay Pizza branding: replace brand colors (obsidian, cobalt, gold) with 'pizzaRed': '#B71C1C', 'pizzaRedDark': '#C0392B', 'warmWhite': '#FAFAFA'. Update semantic color variables to support red-and-white palette. Keep Inter font family or switch to a warm, readable font for restaurant context."
+        },
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "delete",
+          "description": "Remove existing Funded Flex Home page (Hero, stats, CoreServices, CTA banner)"
+        },
+        {
+          "path": "frontend/src/pages/AboutUs.tsx",
+          "operation": "delete",
+          "description": "Remove About Us page (not needed for Samay Pizza)"
+        },
+        {
+          "path": "frontend/src/pages/ContactUs.tsx",
+          "operation": "delete",
+          "description": "Remove Contact Us page (not needed for Samay Pizza)"
+        },
+        {
+          "path": "frontend/src/pages/Solutions.tsx",
+          "operation": "delete",
+          "description": "Remove Solutions page (not needed for Samay Pizza)"
+        },
+        {
+          "path": "frontend/src/pages/InstitutionalFunding.tsx",
+          "operation": "delete",
+          "description": "Remove Institutional Funding page (not needed for Samay Pizza)"
+        },
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "delete",
+          "description": "Remove Funded Flex Hero component (replaced by new Samay Pizza hero in Home page)"
+        },
+        {
+          "path": "frontend/src/components/CoreServices.tsx",
+          "operation": "delete",
+          "description": "Remove CoreServices component (not applicable to Samay Pizza)"
+        },
+        {
+          "path": "frontend/src/components/TeamSection.tsx",
+          "operation": "delete",
+          "description": "Remove TeamSection component (not needed for Samay Pizza)"
+        },
+        {
+          "path": "frontend/src/components/DataGlobe.tsx",
+          "operation": "delete",
+          "description": "Remove DataGlobe component (not applicable to Samay Pizza)"
+        },
+        {
+          "path": "frontend/src/components/ContactForm.tsx",
+          "operation": "delete",
+          "description": "Remove generic ContactForm component (order form is different and integrated into Order page)"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Create Home page with hero section, fast delivery icons, 'Order Now' button, and footer with restaurant details",
+      "acceptanceCriteria": [
+        "Hero section displays 'Welcome to Samay Pizza' prominently",
+        "Fast delivery icons/badges are visible in the hero or below it",
+        "'Order Now' button navigates to the Menu page",
+        "Footer shows address: Sonauli Road Pipiganj, Gorakhpur (U.P.)",
+        "Footer shows WhatsApp: +918957401994 and email: monikakgupta2507@gmail.com"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Create new Home page component with: (1) Large hero section featuring the generated hero banner image (frontend/public/assets/generated/hero-banner.dim_1200x500.png) as background, overlaid with 'Welcome to Samay Pizza' headline in white text and a subheadline about fresh pizza and fast delivery; (2) Fast delivery feature section below the hero displaying icons/badges (e.g., '30-Min Delivery', 'Fresh Ingredients', 'Hot & Tasty') with red icons on white cards; (3) A prominent red 'Order Now' button that uses React Router's Link or navigate to go to '/menu'; (4) Mobile-responsive layout with stacked sections on small screens. Apply deep red (#B71C1C) for CTA buttons and accents, white for content areas."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create Menu page with categorized items (Pizza, Chinese, Rice, Burger, Snacks) showing pricing and 'Add to Cart' functionality",
+      "acceptanceCriteria": [
+        "All 5 categories are displayed with clear section headers",
+        "All pizza items show Regular/Medium/Large size options with correct prices",
+        "All Chinese and Rice items show Half/Full options with correct prices",
+        "All burger items show fixed price",
+        "Snacks/Extras section is displayed",
+        "'Add to Cart' button works and updates cart count/state",
+        "Size/variant selector appears before adding to cart where applicable"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/MenuPage.tsx",
+          "operation": "create",
+          "description": "Create Menu page component that renders 5 category sections (Pizza, Chinese, Rice, Burger, Snacks/Extras) with clear red-accented headers. Each menu item is displayed as a white card with item name, description (optional), size/variant selector (dropdown or radio buttons for pizzas, Chinese, Rice items), price display, and a red 'Add to Cart' button. Wire up 'Add to Cart' to call a context or hook function (e.g., useCart) that updates global cart state. Display a cart icon with item count in the Navbar or a floating cart button. Ensure mobile responsiveness with stacked cards. Pizza items: Cheese Corn (₹90/150/250), Spicy Indian (₹100/150/250), Simply Veg, Paneer Ka Maza, Double Cheese, Paneer Makhani, Sabz Bahar, Samay Pizza Special (₹150/180/300), Tandoori Paneer, Veggie Supreme, Best Pataka, Chatpata Paneer. Chinese items (Half/Full): Veg Chowmein (₹50/100), Paneer Chowmein (₹60/120), Mix Chowmein, Paneer Chilli, Paneer Chilli Gravy, Chilli Potato, Veg Manchurian Dry/Gravy. Rice items (Half/Full): Veg Fried Rice (₹50/100), Paneer Fried Rice (₹60/120), Veg Biryani (₹70/130). Burger items: Veg Burger (₹40), Classic Burger (₹60), Veg Cheese Burger (₹60), Classic Cheese Burger (₹80). Snacks/Extras: French Fries, Lava Cake, Extra Cheese/Toppings (add pricing as needed or mark as 'Add-on')."
+        },
+        {
+          "path": "frontend/src/context/CartContext.tsx",
+          "operation": "create",
+          "description": "Create a React context and provider (CartProvider) to manage cart state globally. State includes an array of cart items (each with item name, size/variant, price, quantity). Expose functions: addToCart(item), removeFromCart(itemId), updateQuantity(itemId, quantity), clearCart(), and a computed totalPrice. Wrap the App or router with CartProvider so all pages can access cart state."
+        },
+        {
+          "path": "frontend/src/hooks/useCart.ts",
+          "operation": "create",
+          "description": "Create a custom hook useCart() that returns the cart context (cart items, addToCart, removeFromCart, updateQuantity, clearCart, totalPrice). This hook is used by MenuPage and OrderPage components to interact with the cart."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Create Order/Checkout page with cart summary, customer form, WhatsApp 'Place Order' button, and UPI payment section with QR code",
+      "acceptanceCriteria": [
+        "Cart summary lists all added items with sizes and subtotals",
+        "Total price is calculated and displayed correctly",
+        "Customer form has Name, Phone Number, and Address fields with validation",
+        "'Place Order' opens WhatsApp link for +918957401994 with pre-filled order message",
+        "WhatsApp message includes item list, total, name, phone, and address",
+        "UPI ID 'monikabhojwal2507@okhdfcbank' is displayed",
+        "UPI QR code image is rendered on the page"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/OrderPage.tsx",
+          "operation": "create",
+          "description": "Create Order/Checkout page component with three sections: (1) Cart Summary: Display all items from useCart() with item name, size/variant, quantity, and price. Show calculated total price. Include buttons to adjust quantity or remove items. If cart is empty, show a message and a link back to Menu. (2) Customer Form: Controlled form with fields for Name, Phone Number (10-digit validation), and Delivery Address (textarea). Include client-side validation and error messages. (3) Place Order Button: On click, validate form, construct a WhatsApp message string with order details (item list, total, customer name, phone, address), then open window.open('https://wa.me/918957401994?text=' + encodeURIComponent(message)). (4) UPI Payment Section: Display heading 'Pay via UPI', show UPI ID 'monikabhojwal2507@okhdfcbank' as text, render the generated QR code image (frontend/public/assets/generated/upi-qr-code.dim_300x300.png) in a white card with red border, and include a 'Pay Now' button (informational or links to UPI app if possible). Use deep red for primary buttons, white cards, and ensure mobile responsiveness."
+        },
+        {
+          "path": "frontend/src/hooks/usePlaceOrder.ts",
+          "operation": "create",
+          "description": "Create a custom hook usePlaceOrder() that returns a mutation function to submit order details to the backend via actor.placeOrder(customerName, phoneNumber, address, orderItems, totalPrice). Use TanStack Query's useMutation. On success, optionally show a toast notification and clear the cart. This hook is called from OrderPage after the WhatsApp link is opened (or as a secondary backup to persist order data in the backend)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Apply Deep Red and White design theme across the entire site with food-appropriate styling and hover effects",
+      "acceptanceCriteria": [
+        "Primary brand color is deep red used consistently on CTAs, headers, and highlights",
+        "Content areas use white/off-white backgrounds for readability",
+        "Menu item cards have hover effects",
+        "Buttons have red background with white text",
+        "Overall design feels professional and food-brand appropriate"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ui/Button.tsx",
+          "operation": "modify",
+          "description": "Update Button component default variant to use deep red (#B71C1C) background and white text. Add hover state with slightly darker red (#A91C1C). Ensure destructive and secondary variants also align with the red-and-white theme. Maintain existing shadcn/ui structure but override color tokens."
+        },
+        {
+          "path": "frontend/src/components/ui/Card.tsx",
+          "operation": "modify",
+          "description": "Update Card component to use white background with subtle shadow. On hover, apply a light red border or shadow effect. Ensure CardHeader, CardTitle, CardDescription, CardContent, and CardFooter all support the Samay Pizza theme with warm typography and red accents where appropriate."
+        }
+      ]
+    }
+  ]
+}
