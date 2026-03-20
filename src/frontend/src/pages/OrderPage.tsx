@@ -143,8 +143,8 @@ export default function OrderPage() {
             Order Sent! 🎉
           </h2>
           <p className="text-gray-500 mb-6">
-            Your order has been sent via WhatsApp. We'll confirm it shortly.
-            Please complete the payment via UPI.
+            Your order has been sent via WhatsApp. We'll confirm it shortly. We
+            look forward to serving you!
           </p>
           <Link
             to="/menu"
@@ -367,7 +367,7 @@ export default function OrderPage() {
               </div>
             </div>
 
-            {/* Right: Payment + Place Order */}
+            {/* Right: Place Order */}
             <div className="lg:col-span-2 space-y-5">
               {/* Place Order */}
               <div className="bg-white rounded-2xl shadow-card border border-gray-100 p-5">
@@ -402,45 +402,6 @@ export default function OrderPage() {
                 </button>
                 <p className="text-xs text-gray-400 text-center mt-2">
                   Order will be sent to +91 87536 71877
-                </p>
-              </div>
-
-              {/* UPI Payment */}
-              <div className="bg-white rounded-2xl shadow-card border border-gray-100 p-5">
-                <h2 className="font-bold text-gray-800 text-lg mb-1">
-                  Pay via UPI
-                </h2>
-                <p className="text-gray-500 text-sm mb-4">
-                  Scan QR code or use UPI ID to pay
-                </p>
-
-                {/* QR Code */}
-                <div className="flex justify-center mb-4">
-                  <div
-                    className="p-3 rounded-xl border-2"
-                    style={{ borderColor: "#B71C1C" }}
-                  >
-                    <img
-                      src="/assets/generated/upi-qr-code.dim_300x300.png"
-                      alt="UPI QR Code"
-                      className="w-40 h-40 object-contain"
-                    />
-                  </div>
-                </div>
-
-                {/* UPI ID */}
-                <div
-                  className="rounded-xl p-3 text-center"
-                  style={{ backgroundColor: "#FFEBEE" }}
-                >
-                  <p className="text-xs text-gray-500 mb-1">UPI ID</p>
-                  <p className="font-bold text-sm" style={{ color: "#B71C1C" }}>
-                    monikabhojwal2507@okhdfcbank
-                  </p>
-                </div>
-
-                <p className="text-xs text-gray-400 text-center mt-3">
-                  After payment, share screenshot on WhatsApp
                 </p>
               </div>
 

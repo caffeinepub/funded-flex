@@ -7,6 +7,7 @@ import {
   createRoute,
   createRouter,
 } from "@tanstack/react-router";
+import Chatbot from "./components/Chatbot";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { CartProvider } from "./context/CartContext";
@@ -28,6 +29,7 @@ function RootLayout() {
       </main>
       <Footer />
       <Toaster richColors position="top-right" />
+      <Chatbot />
     </div>
   );
 }
